@@ -3,7 +3,12 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
+        <a href="<%- url_for() %>" id="logo" style="
+            font-weight: 900;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.5);
+            /* background-origin: border-box; */
+        "><%= config.title %></a>
       </h1>
       <% if (theme.subtitle){ %>
         <h2 id="subtitle-wrap">

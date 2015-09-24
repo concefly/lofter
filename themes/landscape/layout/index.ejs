@@ -1,1 +1,55 @@
-<%- partial('_partial/archive', {pagination: 2, index: true}) %>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title><%= config.title %></title>
+		<%- css('css/style') %>
+		<style>
+			body {
+				font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+				margin: 0;
+			}
+			#jumb {
+				background-image: url("http://7xljt6.com1.z0.glb.clouddn.com/homepage/bg/bg1.jpg");
+				background-color: #262A30;
+				background-size: cover;
+			}
+			#desc {
+				margin: 0 auto;
+				padding: 40px 0;
+				width: 60%;
+				text-align: center;
+				color: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="jumb">
+			<div id="desc">
+				<img src="http://7xljt6.com1.z0.glb.clouddn.com/homepage/bg/avatar.png" alt="Jam's avatar" width='128'>
+				<br>
+				<h1 style="font-size:40px; line-height:80px">Jam's talk</h1>
+				<h3 style="font-size:25px; line-height:45px">The thinking of web design</h3>
+				<h4 style="font-size:20px; line-height:40px">BY</h4>
+				<a href="/about-me" style="
+				    border-radius: 100px;
+				    color: #fff;
+				    text-decoration: none;
+				    padding: 10px 30px;
+				    font-size: 16px;
+    				line-height: 50px;
+    				background-color: #5EAD50">黄文鉴</a>
+			</div>
+		</div>
+		<!-- content -->
+		<div class="outer">
+			<%- partial('_partial/archive', {pagination: config.archive, index: true}) %>
+		</div>
+		<!-- footer -->
+		<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+		<!-- js -->
+		<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	</body>
+</html>

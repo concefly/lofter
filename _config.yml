@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 大大旅行家的阁楼
+title: Jam's talk
 subtitle: 
 description:
-author: concefly
+author: 黄文鉴
 language: zh-CN
-timezone: UTC-8
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -24,7 +24,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang
+i18n_dir: :languages
 skip_render:
 
 # Writing
