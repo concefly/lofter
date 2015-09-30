@@ -1,0 +1,266 @@
+
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>绘制跟随页面滚动的sidedot | Jam&#39;s talk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="效果一览
+
+
+随页面滚动，dot可自动变化
+可对每个页面配置title
+CSS绘制样式
+极少JS代码
+
+Step by step基本样式1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&amp;lt;s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="绘制跟随页面滚动的sidedot">
+<meta property="og:url" content="http://concefly.github.io/2015/09/30/绘制跟随页面滚动的sidedot/index.html">
+<meta property="og:site_name" content="Jam's talk">
+<meta property="og:description" content="效果一览
+
+
+随页面滚动，dot可自动变化
+可对每个页面配置title
+CSS绘制样式
+极少JS代码
+
+Step by step基本样式1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&amp;lt;s">
+<meta property="og:image" content="http://concefly.github.io/img/1443519867210.png">
+<meta property="og:image" content="http://concefly.github.io/img/1443519937139.png">
+<meta property="og:image" content="http://concefly.github.io/img/1443523379234.png">
+<meta property="og:image" content="http://concefly.github.io/img/1443607984008.png">
+<meta property="og:updated_time" content="2015-09-30T12:32:08.385Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="绘制跟随页面滚动的sidedot">
+<meta name="twitter:description" content="效果一览
+
+
+随页面滚动，dot可自动变化
+可对每个页面配置title
+CSS绘制样式
+极少JS代码
+
+Step by step基本样式1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768&amp;lt;s">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  
+
+</head>
+  <body>
+    <div id="container">
+      <div id="wrap">
+        <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo" style="
+            font-weight: 900;
+            padding: 20px;
+            background-color: rgba(128, 128, 128, 0.5);
+            /* background-origin: border-box; */
+        ">Jam&#39;s talk</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">主页</a>
+        
+          <a class="main-nav-link" href="/archives">文章</a>
+        
+          <a class="main-nav-link" href="/about-me">关于我</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://concefly.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+        <div class="outer">
+          <section id="main"><article id="post-绘制跟随页面滚动的sidedot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/09/30/绘制跟随页面滚动的sidedot/" class="article-date">
+  <time datetime="2015-09-29T16:00:00.000Z" itemprop="datePublished">2015-09-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      绘制跟随页面滚动的sidedot
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="效果一览">效果一览</h2><p><img src="/img/1443519867210.png" alt="Alt text"></p>
+<p><img src="/img/1443519937139.png" alt="Alt text"></p>
+<ul>
+<li>随页面滚动，dot可自动变化</li>
+<li>可对每个页面配置title</li>
+<li>CSS绘制样式</li>
+<li>极少JS代码</li>
+</ul>
+<h2 id="Step_by_step">Step by step</h2><h3 id="基本样式">基本样式</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><br><span class="line">    <span class="class">.side-dot</span> <span class="rules">&#123;</span><br><span class="line">        <span class="comment">/*相对视口定位到右侧*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">45%</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">        <span class="comment">/*转变为块，以撑开外层容器*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">        <span class="comment">/*加边距，防止dot挤在一起*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="rule"><span class="attribute">a</span>:<span class="value">after &#123;</span><br><span class="line">        content: <span class="string">""</span></span></span>;</span><br><span class="line">        <span class="comment">/*伪元素默认是行内元素，应转变为块*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="comment">/*dot左右居中*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#888</span></span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="rule"><span class="attribute">a.active</span>:<span class="value">after &#123;</span><br><span class="line">        content: <span class="string">""</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">aside</span> <span class="attribute">class</span>=<span class="value">'side-dot'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page1"</span> <span class="attribute">class</span>=<span class="value">'active'</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page2"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page3"</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">aside</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page1'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 1<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page2'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 2<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page3'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 3<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--jquery--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/2.1.4/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> topTrigger = screen.height * <span class="number">0.4</span>;</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            pages = $(<span class="string">'.sp'</span>);</span><br><span class="line">            <span class="built_in">window</span>.onscroll = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">                pages.each(<span class="function"><span class="keyword">function</span>(<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">                    el = $(el);</span><br><span class="line">                    <span class="keyword">var</span> eTop = el.offset().top;</span><br><span class="line">                    <span class="keyword">var</span> sTop = $(<span class="built_in">document</span>).scrollTop();</span><br><span class="line">                    <span class="keyword">if</span>(eTop&gt;=sTop &amp;&amp; eTop-sTop&lt;topTrigger)&#123;</span><br><span class="line">                        $(<span class="string">'.side-dot a[href]'</span>).removeClass(<span class="string">'active'</span>);</span><br><span class="line">                        $(<span class="string">'.side-dot a[href=#'</span>+el.attr(<span class="string">'id'</span>)+<span class="string">']'</span>).addClass(<span class="string">'active'</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>aside&gt;ul&gt;li&gt;a</code>空标签，做定位占位符；href属性指向页面id</li>
+<li><code>section.sp#id</code> 每个页面都需要加上sp类、页面id</li>
+</ul>
+<p><img src="/img/1443523379234.png" alt="Alt text"></p>
+<h3 id="在dot旁显示title">在dot旁显示title</h3><p>原理：CSS查找<code>.side-dot&gt;ul&gt;li&gt;a.active[title]</code>，并绝对定位<code>::before</code>到dot的左边。content属性写成<code>attr(title)</code>即可显示title的值。</p>
+<p>CSS不应该查找没有title属性的<code>.side-dot&gt;ul&gt;li&gt;a.active</code>，否则title容器内容为空会导致“残废”标签。</p>
+<p><img src="/img/1443607984008.png" alt="Alt text"></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">style</span>&gt;</span><span class="css"></span><br><span class="line">    <span class="class">.side-dot</span> <span class="rules">&#123;</span><br><span class="line">        <span class="comment">/*相对视口定位到右侧*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">position</span>:<span class="value"> fixed</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">45%</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">list-style</span>:<span class="value"> none</span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="tag">a</span> <span class="rules">&#123;</span><br><span class="line">        <span class="comment">/*转变为块，以撑开外层容器*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">        <span class="comment">/*title的定位依据*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</span><br><span class="line">        <span class="comment">/*加边距，防止dot挤在一起*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">20px</span> <span class="number">10px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="rule"><span class="attribute">a</span>:<span class="value">after &#123;</span><br><span class="line">        content: <span class="string">""</span></span></span>;</span><br><span class="line">        <span class="comment">/*伪元素默认是行内元素，应转变为块*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="comment">/*dot左右居中*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">2px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#888</span></span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="rule"><span class="attribute">a.active</span>:<span class="value">after &#123;</span><br><span class="line">        content: <span class="string">""</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class">.side-dot</span> &gt; <span class="tag">ul</span> &gt; <span class="tag">li</span> &gt; <span class="tag">a</span><span class="class">.active</span><span class="attr_selector">[title]</span><span class="pseudo">:before</span> <span class="rules">&#123;</span><br><span class="line">        <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="function">attr</span>(title)</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> solid <span class="hexcolor">#888</span></span></span>;</span><br><span class="line">        <span class="comment">/*内部文字样式*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">18px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">font-size</span>:<span class="value"> <span class="number">13px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">0</span> <span class="number">5px</span></span></span>;</span><br><span class="line">        <span class="comment">/*定位*/</span></span><br><span class="line">        <span class="rule"><span class="attribute">position</span>:<span class="value"> absolute</span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">right</span>:<span class="value"> <span class="number">30px</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">        <span class="rule"><span class="attribute">margin-top</span>:<span class="value"> -<span class="number">10px</span></span></span>;</span><br><span class="line">    &#125;</span></span><br><span class="line"></span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">aside</span> <span class="attribute">class</span>=<span class="value">'side-dot'</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page1"</span> <span class="attribute">class</span>=<span class="value">'active'</span> <span class="attribute">title</span>=<span class="value">'page1'</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page2"</span> <span class="attribute">title</span>=<span class="value">'page2'</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#page3"</span> <span class="attribute">title</span>=<span class="value">'page3'</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">aside</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page1'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 1<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page2'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 2<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">section</span> <span class="attribute">class</span>=<span class="value">"sp"</span> <span class="attribute">id</span>=<span class="value">'page3'</span> <span class="attribute">style</span>=<span class="value">'height:700px'</span>&gt;</span>This is page 3<span class="tag">&lt;/<span class="title">section</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--jquery--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"http://libs.baidu.com/jquery/2.1.4/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span>&gt;</span><span class="javascript"></span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> topTrigger = screen.height * <span class="number">0.4</span>;</span><br><span class="line">        $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            pages = $(<span class="string">'.sp'</span>);</span><br><span class="line">            <span class="built_in">window</span>.onscroll = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">                pages.each(<span class="function"><span class="keyword">function</span>(<span class="params">index, el</span>) </span>&#123;</span><br><span class="line">                    el = $(el);</span><br><span class="line">                    <span class="keyword">var</span> eTop = el.offset().top;</span><br><span class="line">                    <span class="keyword">var</span> sTop = $(<span class="built_in">document</span>).scrollTop();</span><br><span class="line">                    <span class="keyword">if</span>(eTop&gt;=sTop &amp;&amp; eTop-sTop&lt;topTrigger)&#123;</span><br><span class="line">                        $(<span class="string">'.side-dot a[href]'</span>).removeClass(<span class="string">'active'</span>);</span><br><span class="line">                        $(<span class="string">'.side-dot a[href=#'</span>+el.attr(<span class="string">'id'</span>)+<span class="string">']'</span>).addClass(<span class="string">'active'</span>);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="样式扩展">样式扩展</h3><ul>
+<li>添加 <code>.side-dot&gt;ul&gt;li&gt;a[title]:hover:before</code> 规则，可实现鼠标悬停显示标签</li>
+<li>先占坑</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <div style="float:right">
+        
+<div>
+	<div class="bdsharebuttonbox">
+		<a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	</div>
+	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+      </div>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/09/26/CSS绘制全宽度导航栏/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CSS绘制全宽度导航栏</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+          
+            <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/CSS/" style="font-size: 10px;">CSS</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">3</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/09/30/绘制跟随页面滚动的sidedot/">绘制跟随页面滚动的sidedot</a>
+          </li>
+        
+          <li>
+            <a href="/2015/09/26/CSS绘制全宽度导航栏/">CSS绘制全宽度导航栏</a>
+          </li>
+        
+          <li>
+            <a href="/2015/09/04/placeholder/">placeholder</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+          
+        </div>
+        <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 黄文鉴 <br>
+      一个跨界的工程师
+    </div>
+  </div>
+</footer>
+      </div>
+      <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">主页</a>
+  
+    <a href="/archives" class="mobile-nav-link">文章</a>
+  
+    <a href="/about-me" class="mobile-nav-link">关于我</a>
+  
+</nav>
+      
+
+<script src="//ajax.useso.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+    </div>
+  </body>
+  </html>
+
